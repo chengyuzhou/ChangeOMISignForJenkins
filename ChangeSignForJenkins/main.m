@@ -22,6 +22,8 @@ void process (NSString * filePath) {
         configDic[@"buildSettings"][@"CODE_SIGN_IDENTITY[sdk=iphoneos*]"] = @"iPhone Developer: Brian Lin (7XX974NDLV)";
         //configDic[@"buildSettings"][@"PROVISIONING_PROFILE"] = @"4940b45f-c196-4c6f-b334-5edaaffdc633";
         configDic[@"buildSettings"][@"PROVISIONING_PROFILE_SPECIFIER"] = @"omi_ios_dev_0601_provision";
+        configDic[@"buildSettings"][@"ENABLE_BITCODE"] = @"NO";
+
     }
     
     configDic = [dic[@"objects"] objectForKey:@"F22E97D51FE1366F004B8C91"];
@@ -30,6 +32,8 @@ void process (NSString * filePath) {
         configDic[@"buildSettings"][@"CODE_SIGN_IDENTITY[sdk=iphoneos*]"] = @"iPhone Distribution: Brian Lin (V332RPGP8U)";
         configDic[@"buildSettings"][@"PROVISIONING_PROFILE_SPECIFIER"] = @"omi_adhoc_06_01_provision";
         //configDic[@"buildSettings"][@"PROVISIONING_PROFILE"] = @"cb6a8529-8d15-480e-9a05-441091f9887a";
+        configDic[@"buildSettings"][@"ENABLE_BITCODE"] = @"NO";
+
     }
   
     configDic = [dic[@"objects"] objectForKey:@"BFF3DD5520BD785900444D44"];
@@ -38,6 +42,8 @@ void process (NSString * filePath) {
       configDic[@"buildSettings"][@"CODE_SIGN_IDENTITY[sdk=iphoneos*]"] = @"iPhone Developer: Brian Lin (7XX974NDLV)";
       configDic[@"buildSettings"][@"PROVISIONING_PROFILE_SPECIFIER"] = @"omi_ios_dev_0601_provision";
       //configDic[@"buildSettings"][@"PROVISIONING_PROFILE"] = @"cb6a8529-8d15-480e-9a05-441091f9887a";
+        configDic[@"buildSettings"][@"ENABLE_BITCODE"] = @"NO";
+
     }
     [dic writeToFile:filePath atomically:YES];
 }
